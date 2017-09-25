@@ -120,7 +120,8 @@ int main(int argc, char **argv)
                             printf("Chanel : %d\n",t3->chanel);
                             pkt_data += 2+t3->tag_length;
                             pkt_length -= 2+t3->tag_length;
-                           break;
+                        default:
+                            break;
                     }
                     bf++;
                     break;
@@ -137,7 +138,6 @@ int main(int argc, char **argv)
                     //printf("QosData\n");
                     q++;
                     break;
-
                 case 0x1148:
                 case 0x0148:
                 case 0x0948:
